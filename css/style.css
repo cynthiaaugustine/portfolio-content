@@ -1,3 +1,33 @@
+body {
+    font-family: Poppins, Helvetica, sans-serif;
+}
+
+header {
+    display: grid;
+    min-height: 100px;
+    grid-row: 1;
+}
+
+aside {
+    grid-row: 3;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 25px;
+    padding: 20px;
+}
+
+p {
+    line-height: 20px;
+    padding: 20px;
+}
 nav {
     display: inline-block;
     margin: 0;
@@ -7,30 +37,116 @@ nav {
 
 nav li {
     display: inline;
-    padding: 20px;
+    font-size: 20px;
+    padding: 8px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
 }
 
 main {
     margin: 30px;
+    grid-column: 1;
+    grid-row: 2;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
+
+figure {
+    align-content: center;
+    width: 100%;
+}
+
+figcaption {
+    font-weight: bold;
+    padding: 20px;
 }
 
 img {
-    width: 20%;
     margin: 20px;
-    padding: 30px;
+    padding: 10px;
     border: solid;
     border-color: #26428b;
     border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 40%;
+}
+
+.gallery-item {
+    display: flex;
+    text-align: center;
+    align-content: center;
+
+}
+
+.gallery {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.principles {
+    background-color: #26428b;
+    border-radius: 10px;
+}
+
+.principle-content {
+    color: white;
 }
 
 img:hover {
     opacity: 0.5;
 }
 
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 1fr 100px 100px;
+}
+
+.book {
+    animation: fadeIn 5s, moveIn 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveIn {
+    from {
+        margin-top: 200%;
+    }
+    to {
+        margin-top: 0%;
+    }
+}
+
+form {
+    padding: 20px;
+}
+
+footer {
+    background-image: url("../images/background.jpg");
+    grid-row: 4;
+    grid-column: 1/-1;
+    font-weight: bold;
+    padding: 20px;
+}
 
 /* Links */
 
@@ -61,7 +177,7 @@ a:hover {
 
 .skip a {
     position: absolute;
-    top: -40px;
+    top: -50px;
     z-index: -1;
     color: black;
 }
@@ -72,3 +188,25 @@ a:hover {
     color: black;
 }
 
+
+@media all and (min-width: 700px) {
+
+    .container {
+
+    }
+
+    .gallery {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (prefers-reduced-motion) {
+
+    .book {
+        animation: none;
+    }
+}

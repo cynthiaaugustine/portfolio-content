@@ -1,7 +1,15 @@
 ﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8Z2N4SQDS"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-H8Z2N4SQDS');</script>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Design Principles</title>
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -11,7 +19,7 @@
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <header>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="ux-goodreads.html">Podcasts & Good Reads</a></li>
                 <li><a href="principles.html" class="active-link">My Design Principles</a></li>
@@ -25,20 +33,26 @@
         <p>On this page you'll find a list of design principles that I follow.</p>
         <p>I've curated this to provide guidance for designing ethically humane digital products through patterns focused on user-centred design.</p>
         <figure>
-            <img src="images/ux.jpeg" style="width:20%" alt="Image of the word UX spelled out using black and white illustrations." >
+            <img src="images/ux.jpeg" style="width:40%" alt="Image of the word UX spelled out using black and white illustrations." >
             <figcaption>Picture of the word UX composed of illustrations.</figcaption>
         </figure>
-        <figure>
-            <img src="images/principle-01.png" style="width:50%" alt="Image containing the word Principle 01" >
-        </figure>
-        <figure>
-            <img src="images/principle-02.png" style="width:50%" alt="Image containing the word Principle 02" >
-        </figure>
-        <figure>
-            <img src="images/principle-03.png" style="width:50%" alt="Image containing the word Principle 03" >
-        </figure>
+        <div class="principles">
+            <div class="principle-content">
+                <h2>1. Design with Empathy</h2>
+                <p>In User Experience, the user's needs, goals and experiences should take precedence throughout the design process. Having empathy in design means understanding users: not just their needs, but also their constraints and the context of their situation as a whole.</p>
+            </div>
+            <div class="principle-content">
+                <h2>2. Keep it Simple</h2>
+                <p>Time and time again I've learned that simple designs win over the complex ones. Our goal as designers is to help users achieve their goals in the most straightforward possible way. Therefore, I believe that it's important to always design for the 'path of least resistance'. Less is more!</p>
+            </div>
+            <div class="principle-content">
+                <h2>3. Make Mistakes Earlier in the Process</h2>
+                <p>The quicker your learn from your design mistakes, the quicker you can start identifying areas of improvement. That's where user testing comes into play. Don't underestimat the power of testinig.  </p>
+            </div>
+        </div>
     </main>
     <footer>
+        <p> &copy; Created by Cynthia Augustine 2022</p>
     </footer>
 </body>
 </html>

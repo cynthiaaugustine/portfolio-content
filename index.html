@@ -1,16 +1,28 @@
 ﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8Z2N4SQDS"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-H8Z2N4SQDS');</script>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Product Design Handbook</title>
-    <link rel="stylesheet" href="css/html5reset.css" >
+    <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <header>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html" class="active-link">Home</a></li>
                 <li><a href="ux-goodreads.html">Podcasts & Good Reads</a></li>
                 <li><a href="principles.html">My Design Principles</a></li>
@@ -19,16 +31,38 @@
             </ul>
         </nav>
     </header>
-    <main id ="main">
-        <h1> 📖 My Product Design Handbook</h1>
-        <p>Hey there! On this website, I hope to share my experiences as a Product Designer and the lessons I've learned through my Masters at the University of Michigan.</p>
-        <p>You can also check out podcasts and books I'd recommend as well some of the design principles I follow. This is a great resource for anyone wanting to get into User Experience design.</p>
-        <figure>
-            <img src="images/girl-reading.png" style="width:20%" alt="Line drawing of girl with blue pants reading a book." >
-            <figcaption>Picture of a girl reading a book.</figcaption>
-        </figure>
+    <main id="main">
+        <h1>My Product Design Handbook</h1>
+        <p>Hey there! My name is Cynthia I created this website to share my experiences as a Product Designer and the lessons I've learned as a MSI student at the University of Michigan. You can also check out podcasts and books I'd recommend as well some of the design principles I follow.
+           This is a great resource for anyone wanting to get into User Experience design.  I know how overwhelming it can be to break into the industry with so many resources – I’ve been there. So I’ve selected some of the resources that have helped me to grow as a designer.
+        </p>
+        <div>
+            <figure>
+                <img src="images/girl-reading.png" style="width:50%" alt="Line drawing of girl with blue pants reading a book.">
+                <figcaption>Picture of a girl reading a book.</figcaption>
+            </figure>
+
+            <p>I’m a multidisciplinary designer that leads with empathy, strives for seamless digital experiences, and has an appetite for social impact initiatives.
+            My background in Digital Media and Informatics has shaped me into an open-minded individual and also allows me to bring a fresh perspective to my design process. </p>
+        </div>
+        <div class="form">
+            <form action="https://formspree.io/f/mbjbpqgb"
+                  method="POST">
+                <label>
+                    Your email:
+                    <input type="email" name="email">
+                </label>
+                <label>
+                    Your message:
+                    <textarea name="message"></textarea>
+                </label>
+                <!-- your other form fields go here -->
+                <button type="submit">Send</button>
+            </form>
+        </div>
     </main>
     <footer>
+        <p> &copy; Created by Cynthia Augustine 2022</p>
     </footer>
 </body>
 </html>
