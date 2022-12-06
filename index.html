@@ -16,52 +16,77 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/book" href="images/book.ico">
 </head>
 <body>
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
-    <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active-link">Home</a></li>
-                <li><a href="ux-goodreads.html">Podcasts & Good Reads</a></li>
-                <li><a href="principles.html">My Design Principles</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main id="main">
-        <h1>My Product Design Handbook</h1>
-        <p>Hey there! My name is Cynthia I created this website to share my experiences as a Product Designer and the lessons I've learned as a MSI student at the University of Michigan. You can also check out podcasts and books I'd recommend as well some of the design principles I follow.
-           This is a great resource for anyone wanting to get into User Experience design.  I know how overwhelming it can be to break into the industry with so many resources – I’ve been there. So I’ve selected some of the resources that have helped me to grow as a designer.
-        </p>
-        <div>
-            <figure>
-                <img src="images/girl-reading.png" style="width:50%" alt="Line drawing of girl with blue pants reading a book.">
-                <figcaption>Picture of a girl reading a book.</figcaption>
-            </figure>
-
-            <p>I’m a multidisciplinary designer that leads with empathy, strives for seamless digital experiences, and has an appetite for social impact initiatives.
-            My background in Digital Media and Informatics has shaped me into an open-minded individual and also allows me to bring a fresh perspective to my design process. </p>
-        </div>
-        <div class="form">
-            <form action="https://formspree.io/f/mbjbpqgb"
-                  method="POST">
-                <label>
-                    Your email:
-                    <input type="email" name="email">
-                </label>
-                <label>
-                    Your message:
-                    <textarea name="message"></textarea>
-                </label>
-                <!-- your other form fields go here -->
-                <button type="submit">Send</button>
-            </form>
-        </div>
-    </main>
-    <footer>
-        <p> &copy; Created by Cynthia Augustine 2022</p>
-    </footer>
+    <div class="container">
+        <header>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active-link">Home</a></li>
+                    <li><a href="ux-goodreads.html">Resources</a></li>
+                    <li><a href="principles.html">Design Principles</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main">
+            <div class="main-header">
+                <h1>My Product Design Handbook</h1>
+                <figure>
+                    <img src="images/girl-reading.png" style="width:50%" alt="Line drawing of girl with blue pants reading a book.">
+                    <figcaption>Picture of a girl reading a book.</figcaption>
+                </figure>
+            </div>
+            <div class="content">
+                <div class="home-text">
+                    <p>
+                        Hey there! <br /> My name is Cynthia I created this website to share my experiences as a Product Designer and the lessons I've learned as a MSI student at the University of Michigan. You can also check out podcasts and books I'd recommend as well some of the design principles I follow.
+                        This is a great resource for anyone wanting to get into User Experience design.  I know how overwhelming it can be to break into the industry with so many resources – I’ve been there. So I’ve selected some of the resources that have helped me to grow as a designer.
+                    </p>
+                    <div>
+                        <p>
+                            I’m a multidisciplinary designer that leads with empathy, strives for seamless digital experiences, and has an appetite for social impact initiatives.
+                            My background in Digital Media and Informatics has shaped me into an open-minded individual and also allows me to bring a fresh perspective to my design process.
+                        </p>
+                    </div>
+                </div>
+                <button id="myBtn">Want to chat? Pop me an email!</button>
+            </div>
+         
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <form action="https://formspree.io/f/mbjbpqgb"
+                          method="POST">
+                        <h2>Let's chat!</h2>
+                        <div class="form-label">
+                            <label>
+                                Your email:
+                                <input type="email" name="email">
+                            </label>
+                        </div>
+                        <div class="form-label">
+                            <label>
+                                Your message:
+                                <textarea name="message"></textarea>
+                            </label>
+                        </div>
+                        <!-- your other form fields go here -->
+                        <div class="form-label">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <script src="js/modal.js"></script>
+        <footer>
+            <p> &copy; Created by Cynthia Augustine 2022</p>
+        </footer>
+    </div>
 </body>
 </html>

@@ -15,19 +15,19 @@ aside {
 h1 {
     font-size: 50px;
     line-height: 1;
-    padding: 20px;
     text-align: center;
 }
 
 h2 {
     font-size: 25px;
-    padding: 20px;
 }
 
 p {
     line-height: 20px;
-    padding: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
+
 nav {
     display: inline-block;
     margin: 0;
@@ -51,7 +51,6 @@ main {
     grid-column: 1;
     grid-row: 2;
 }
-
 
 figure {
     align-content: center;
@@ -83,6 +82,7 @@ img {
 }
 
 .gallery {
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
@@ -91,6 +91,7 @@ img {
 .principles {
     background-color: #26428b;
     border-radius: 10px;
+    padding: 10px;
 }
 
 .principle-content {
@@ -141,11 +142,15 @@ form {
 }
 
 footer {
-    background-image: url("../images/background.jpg");
+    background-image: url("../images/ocean.jpg");
     grid-row: 4;
     grid-column: 1/-1;
     font-weight: bold;
     padding: 20px;
+}
+
+footer p {
+    color: white;
 }
 
 /* Links */
@@ -177,7 +182,7 @@ a:hover {
 
 .skip a {
     position: absolute;
-    top: -50px;
+    top: -500px;
     z-index: -1;
     color: black;
 }
@@ -189,17 +194,404 @@ a:hover {
 }
 
 
-@media all and (min-width: 700px) {
+@media all and (min-width: 776px) {
+
+    body {
+        background-color: #F0F8FF;
+    }
+
+    header {
+        grid-row: 1;
+        grid-column: 1/-1;
+    }
+
+    main {
+        display: grid;
+        grid-column: 1/-1;
+        grid-row: 2;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 20px;
+    }
+
+    .nav-links {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .main-header {
+        grid-row: 1;
+    
+    }
+
+    #book1 {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    #book2 {
+        grid-row: 2;
+        grid-column: 2;
+    }
+
+    #book3 {
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    aside {
+        grid-row: 2;
+        grid-column: 3;
+        color: #26428b;
+        align-self: center;
+    }
+
+    .how-content {
+        grid-column: 1/-1;
+    }
+
+    .principles {
+        grid-column: 2/span 2;
+        padding: 20px;
+    }
+
+    .big-house {
+        grid-row: 3;
+        width: 200%;
+    }
+
+    footer {
+        grid-row: 5;
+        grid-column: 1/-1;
+    }
+
+    nav {
+        background: white;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        align-content: center;
+        justify-content: center;
+        margin: 20px;
+    }
 
     .container {
-
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 1fr 100px;
     }
 
     .gallery {
+        grid-row: 3;
         display: flex;
         justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
+        text-align: center;
+    }
+
+    img {
+        width: 10%;
+    }
+
+    figure {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+    }
+
+    figcaption {
+        width: 100%;
+        text-align: left;
+        justify-content: center;
+    }
+
+    .gallery {
+        grid-column: 1/-1;
+    }
+
+    .gallery-item {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .gallery-item img {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        border-radius: 10px;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 60%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+}
+
+@media screen and (min-width: 1120px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 1fr 100px ;
+    }
+
+    body {
+        background-color: #F0F8FF;
+        justify-content: center;
+    }
+
+    h1 {
+        text-align: left;
+    }
+
+    main {
+        display: grid;
+        grid-column: 1/-1;
+        grid-row: 2;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 50px;
+    }
+
+    header {
+        grid-row: 1;
+        grid-column: 1/-1;
+    }
+
+    nav {
+        background: white;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        align-content: center;
+        justify-content: center;
+        margin: 20px;
+    }
+
+    img {
+        border: none;
+    }
+    .nav-links {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    nav li {
+        justify-self: center;
+    }
+
+    /* Skip to Main Function*/
+
+    .skip a {
+        position: absolute;
+        bottom: -500px;
+        z-index: -1;
+        color: black;
+    }
+
+    .skip a:focus {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        color: black;
+        height: 10px;
+    }
+
+    .gallery-item img {
+        max-width: 300px;
+        justify-self: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    figure {
+        display: flex;
+        text-align: left;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+    }
+
+    figcaption {
+        background-color: white;
+        border-radius: 10px;
+        justify-self: center;
+        width: auto;
+    }
+
+    .gallery {
+        grid-row: 2;
+        grid-column: 1/-1;
+    }
+
+    .gallery-item {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+    }
+
+    .main-header {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .content {
+        grid-row: 1;
+        grid-column: 2/span 2;
+    }
+
+    .how-content {
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    .big-house {
+        grid-row: 1;
+        grid-column: 3;
+    }
+
+    footer {
+        grid-row: 3;
+        grid-column: 1/-1;
+    }
+
+    .book {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .book p{
+        padding: 20px;
+    }
+
+    #book1 {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    #book2 {
+        grid-row: 2;
+        grid-column: 2;
+    }
+
+    #book3 {
+        grid-row: 2;
+        grid-column: 3;
+    }
+
+    aside {
+        grid-row: 2;
+        grid-column: 4;
+    }
+    .ux-image {
+        grid-column: 1;
+    }
+
+    .principles {
+        grid-row: 1/ span 1;
+        grid-column: 2 / span 3;
+        padding: 20px;
+    }
+
+    button {
+        background-color: #26428b;
+        height: 50px;
+        border-radius: 10px;
+        color: white;
+        padding: 10px;
+    }
+
+    .form {
+        background-color: white;
+        border-radius: 10px;
+        grid-column: 1;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .form-label {
+        margin: 20px;
+    }
+
+    textarea {
+        width: 60%;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none; 
+        position: fixed; 
+        z-index: 1; 
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        border-radius: 10px;
+        margin: 15% auto; 
+        padding: 20px;
+        border: 1px solid #888;
+        width: 60%; 
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
     }
 
 }
@@ -207,6 +599,6 @@ a:hover {
 @media (prefers-reduced-motion) {
 
     .book {
-        animation: none;
+       animation: none;
     }
 }
